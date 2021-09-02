@@ -15,13 +15,13 @@ import java.io.IOException
 
  */
 
-
+//Webservice address
 private  const val endPoint = "https://veryable-public-assets.s3.us-east-2.amazonaws.com"
 
 
 
 // create the retrofit object
-val retrofit = Retrofit.Builder()
+private val retrofit = Retrofit.Builder()
     .addConverterFactory(ScalarsConverterFactory.create())
     .addCallAdapterFactory(CoroutineCallAdapterFactory())
     .baseUrl(endPoint)
@@ -30,6 +30,7 @@ val retrofit = Retrofit.Builder()
 
 //create the interface
  interface webServiceInterface{
+    //endPoint
     @GET("/veryable.json")
     suspend fun getAccountDetails(): String?
 }

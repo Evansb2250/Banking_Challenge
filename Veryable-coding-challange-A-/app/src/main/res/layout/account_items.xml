@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="accountDomainModel"
@@ -19,7 +18,7 @@
     android:layout_marginTop="@dimen/account_Item_margin"
     android:layout_marginEnd="@dimen/account_item_side_margins"
     android:layout_marginBottom="@dimen/account_Item_margin"
-    android:background="@color/white"
+    android:background="@color/accountItemColor"
     android:onClick="@{()->clickListener.onClick(accountDomainModel)}">
 
     <ImageView
@@ -59,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <TextView
         android:id="@+id/accountDescTextView"
@@ -67,7 +66,7 @@
         android:layout_height="wrap_content"
         android:text="@{accountDomainModel.desc}"
         style="@style/accountDescStyleInHomeView"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/arrowImageView"
         app:layout_constraintBottom_toTopOf="@+id/accountTransferTypeTextView"
         app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
@@ -83,7 +82,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
-        android:text="@{accountDomainModel.accountType.accountType}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/accountDescTextView"
         app:layout_constraintTop_toBottomOf="@+id/accountDescTextView" />

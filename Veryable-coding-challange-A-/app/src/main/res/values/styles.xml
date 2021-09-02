@@ -7,6 +7,7 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/blue</item>
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">@color/dark_blue</item>
         <item name="colorAccent">@color/white</item>
@@ -51,14 +52,19 @@
     </style>
 
 
-    <style name="toolBarStyle">
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+
+    <style name="toolBarStyle" parent="Base.Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+
+    <style name="toolBarFontStyle">
         <item name="android:textSize">30sp</item>
         <item name="android:color">@color/alternFontColor</item>
         <item name="android:fontFamily">@font/roboto</item>
-
-
     </style>
+
 
 
 </resources>

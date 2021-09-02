@@ -1,9 +1,11 @@
 package com.veryable.android.screens
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
@@ -25,27 +27,27 @@ class DetailView : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_view, container, false)
+
         //got the account instance passed from the HomeViewFragment
         binding.account = args.account
 
+        //navigates back to HomePage
         binding.doneButton.setOnClickListener{ it ->
             findNavController().navigate(DetailViewDirections.actionDetailViewToAccount())
         }
 
+
         setTitleToDetail()
-        setHasOptionsMenu(true)
+
         // Inflate the layout for this fragment
         return binding.root
     }
 
     private fun setTitleToDetail() {
-        val toolBarText = requireActivity().findViewById<TextView>(R.id.titleTextView)
-        toolBarText.setText(R.string.detailsTitle)
+        val appCompatActivity = getActivity() as AppCompatActivity
+         appCompatActivity.supportActionBar?.setCustomView(R.layout.toolbar_layout_details)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-    }
 
 
 

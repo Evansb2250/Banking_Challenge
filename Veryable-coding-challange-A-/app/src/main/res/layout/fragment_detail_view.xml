@@ -17,62 +17,26 @@
         android:background="@color/backgroundColor"
         tools:context=".screens.DetailView">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/imageView"
-                accountImageType="@{account}"
-                android:layout_width="134dp"
-                android:layout_height="133dp"
-                android:layout_marginTop="60dp"
-                android:contentDescription="@string/accountTypeViewDesc" />
-
-            <TextView
-                android:id="@+id/accountName"
-                style="@style/accountNameStyleInDetailView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/topMargin"
-                android:text="@{account.accountName}" />
-
-            <TextView
-                android:id="@+id/accountDescription"
-                style="@style/accountDescStyleInDetailView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{account.desc}" />
-
-        </LinearLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
-                android:layout_width="202dp"
-                android:layout_height="410dp"
-                android:layout_marginBottom="32dp"
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="364dp"
+                android:layout_marginBottom="48dp"
                 android:gravity="bottom"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
                 app:layout_constraintVertical_bias="1.0">
 
                 <Button
@@ -80,10 +44,55 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:backgroundTint="@color/iconColor"
                     android:text="@string/DoneButton"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="364dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    accountImageType="@{account}"
+                    android:layout_width="134dp"
+                    android:layout_height="133dp"
+                    android:layout_marginTop="60dp"
+                    android:contentDescription="@string/accountTypeViewDesc" />
+
+                <TextView
+                    android:id="@+id/accountName"
+                    style="@style/accountNameStyleInDetailView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/topMargin"
+                    android:text="@{account.accountName}" />
+
+                <TextView
+                    android:id="@+id/accountDescription"
+                    style="@style/accountDescStyleInDetailView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{account.desc}" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

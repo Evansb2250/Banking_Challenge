@@ -6,8 +6,8 @@
     <string name="arrowImageViewDesc">Click to view Account</string>
     <string name="accountTypeViewDesc">Display card or bank image based on account type</string>
     <style name="detailTitle">Details</style>
-    <string name="homeTitle">Accounts</string>
-    <string name="detailsTitle">Details</string>
+    <string name="homeTitle">ACCOUNTS</string>
+    <string name="detailsTitle">DETAILS</string>
     <string name="DoneButton">Done</string>
 
 </resources>

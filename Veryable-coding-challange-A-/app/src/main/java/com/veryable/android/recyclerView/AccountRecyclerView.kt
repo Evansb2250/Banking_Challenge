@@ -15,26 +15,21 @@ class AccountAdapter(val clickListener: AdapterEventListener) :
 
     class AccountItemViewHolder(val binding: AccountItemsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        private val accountViewArrow = binding.arrowImageView
-
-
-        init {
-            accountViewArrow.setImageResource(R.drawable.ic_baseline_keyboard_arrow_right_24)
-        }
-
         fun bind(clickListener: AdapterEventListener, accountItem: AccountDomain) {
+            //attach click listener to viewHolder
             binding.clickListener = clickListener
+            //attach account instance to binding object accountDomainModel
             binding.accountDomainModel = accountItem
             //force the execution
             binding.executePendingBindings()
         }
 
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccountAdapter.AccountItemViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AccountItemViewHolder {
         return from(parent)
     }
 
-    override fun onBindViewHolder(holder: AccountAdapter.AccountItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AccountItemViewHolder, position: Int) {
         val accountItem = getItem(position)
         holder.bind(clickListener,accountItem)
     }

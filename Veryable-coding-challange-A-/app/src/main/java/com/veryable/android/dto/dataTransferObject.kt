@@ -9,8 +9,6 @@ import kotlinx.serialization.Serializable
 
 
 
-
-
 @Serializable
 data class AccountDTO(
     @SerialName("id") var id: Int,
@@ -20,6 +18,7 @@ data class AccountDTO(
 )
 
 
+//Transform the DTO model to Domain model
 fun ArrayList<AccountDTO>.dtoModelAsDomain(): List<AccountDomain> {
     return map {
         AccountDomain (
