@@ -13,7 +13,7 @@ import com.veryable.android.domain.AccountDomain
 class AccountAdapter(val clickListener: AdapterEventListener) :
     ListAdapter<AccountDomain, AccountAdapter.AccountItemViewHolder>(AccountDiffUtil()) {
 
-    class AccountItemViewHolder(binding: AccountItemsBinding) : RecyclerView.ViewHolder(binding.root) {
+    class AccountItemViewHolder(val binding: AccountItemsBinding) : RecyclerView.ViewHolder(binding.root) {
 
         private val accountViewArrow = binding.arrowImageView
 
@@ -23,8 +23,10 @@ class AccountAdapter(val clickListener: AdapterEventListener) :
         }
 
         fun bind(clickListener: AdapterEventListener, accountItem: AccountDomain) {
-
-
+            binding.clickListener = clickListener
+            binding.accountDomainModel = accountItem
+            //force the execution
+            binding.executePendingBindings()
         }
 
     }
