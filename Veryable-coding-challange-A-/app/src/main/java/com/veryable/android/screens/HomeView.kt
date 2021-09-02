@@ -15,7 +15,7 @@ import com.veryable.android.viewmodels.AccountViewModel
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 
-class Account : Fragment() {
+class HomeView : Fragment() {
 /*
 
  */
