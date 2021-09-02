@@ -24,7 +24,7 @@
         android:layout_height="21dp"
         android:layout_marginTop="4dp"
         android:contentDescription="@string/accountTypeViewDesc"
-        app:layout_constraintBottom_toBottomOf="@+id/transferTypeTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/accountTransferTypeTextView"
         app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,14 +62,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/arrowImageView"
-        app:layout_constraintBottom_toTopOf="@+id/transferTypeTextView"
+        app:layout_constraintBottom_toTopOf="@+id/accountTransferTypeTextView"
         app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/accountNameTextView"
         app:layout_constraintTop_toBottomOf="@+id/accountNameTextView" />
 
     <TextView
-        android:id="@+id/transferTypeTextView"
+        android:id="@+id/accountTransferTypeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

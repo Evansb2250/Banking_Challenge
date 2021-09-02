@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.veryable.android.R
 import com.veryable.android.databinding.FragmentAccountBinding
+import com.veryable.android.recyclerView.AccountAdapter
+import com.veryable.android.recyclerView.AdapterEventListener
 import com.veryable.android.viewmodels.AccountViewModel
 
 // TODO: Rename parameter arguments, choose names that match
@@ -33,13 +35,26 @@ class HomeView : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_account,container, false)
 
-        accountViewModel.accountDetails.observe(viewLifecycleOwner, { it ->
-            Toast.makeText(requireContext(), "GOT INFO", Toast.LENGTH_LONG).show()
+
+
+        val adapter = AccountAdapter(AdapterEventListener {
+            //Set the account that was clicked
+
         })
 
 
 
+
         binding.accountViewModel = accountViewModel
+
+        binding.recyclerView.adapter = adapter
+
+        accountViewModel.accountDetails.observe(viewLifecycleOwner, { it ->
+            adapter.submitList(it)
+        })
+
+
+
         binding.lifecycleOwner = this
 
 
