@@ -9,5 +9,18 @@
         android:id="@+id/account"
         android:name="com.veryable.android.screens.HomeView"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_account_to_detailView"
+            app:destination="@id/detailView" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailView"
+        android:name="com.veryable.android.screens.DetailView"
+        android:label="fragment_detail_view"
+        tools:layout="@layout/fragment_detail_view" >
+        <argument
+            android:name="Account"
+            app:argType="com.veryable.android.domain.AccountDomain" />
+    </fragment>
 </navigation>

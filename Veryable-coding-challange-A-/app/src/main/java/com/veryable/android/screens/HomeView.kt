@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.veryable.android.R
 import com.veryable.android.databinding.FragmentAccountBinding
 import com.veryable.android.recyclerView.AccountAdapter
@@ -37,9 +38,10 @@ class HomeView : Fragment() {
 
 
 
-        val adapter = AccountAdapter(AdapterEventListener {
+        val adapter = AccountAdapter(AdapterEventListener { account ->
             //Set the account that was clicked
-
+            accountViewModel.navigateToAccount(account)
+            accountViewModel.navigationCompleted()
         })
 
 
@@ -48,6 +50,14 @@ class HomeView : Fragment() {
         binding.recyclerView.adapter = adapter
         accountViewModel.accountDetails.observe(viewLifecycleOwner, { it ->
             adapter.submitList(it)
+        })
+
+
+        accountViewModel.selectedAccount.observe(viewLifecycleOwner, { account ->
+            account?.let {
+               findNavController().navigate(HomeViewDirections.actionAccountToDetailView(account))
+            }
+
         })
 
         binding.lifecycleOwner = this
