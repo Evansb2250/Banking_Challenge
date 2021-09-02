@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="accountDomainModel"
+            type="com.veryable.android.domain.AccountDomain" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/account_item_side_margins"
+    android:layout_marginTop="@dimen/account_Item_margin"
+    android:layout_marginEnd="@dimen/account_item_side_margins"
+    android:layout_marginBottom="@dimen/account_Item_margin"
+    android:background="#9F9191">
+
+    <ImageView
+        android:id="@+id/accountTypeImageView"
+        android:layout_width="35dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/accountTypeViewDesc"
+        app:layout_constraintBottom_toBottomOf="@+id/transferTypeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/accountNameTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/baseline_account_balance_black_48pt_3x" />
+
+    <TextView
+        android:id="@+id/accountNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="hiho"
+        app:layout_constraintBottom_toTopOf="@+id/accountDescTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toEndOf="@+id/accountTypeImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrowImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/arrowImageViewDesc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <TextView
+        android:id="@+id/accountDescTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/arrowImageView"
+        app:layout_constraintBottom_toTopOf="@+id/transferTypeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/arrowImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/accountNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/accountNameTextView" />
+
+    <TextView
+        android:id="@+id/transferTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/accountDescTextView"
+        app:layout_constraintTop_toBottomOf="@+id/accountDescTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

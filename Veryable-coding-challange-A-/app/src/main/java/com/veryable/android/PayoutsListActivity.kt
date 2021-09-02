@@ -17,10 +17,5 @@ class PayoutsListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_payouts_list)
-        val viewModelTest = AccountViewModel()
-
-        viewModelTest.accountDetails.observe(this, { it ->
-            Toast.makeText(this, "GOT INFO", Toast.LENGTH_LONG).show()
-        })
     }
 }

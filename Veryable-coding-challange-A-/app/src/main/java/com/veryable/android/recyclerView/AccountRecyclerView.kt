@@ -3,6 +3,8 @@ package com.veryable.android.recyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -16,7 +18,10 @@ class AccountAdapter(val clickListener: AdapterEventListener) :
     ListAdapter<AccountDomain, AccountAdapter.AccountItemViewHolder>(AccountDiffUtil()) {
 
     class AccountItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        private val accountImageView = itemView.findViewById<ImageView>(R.id.accountTypeImageView)
+        private val accountNameTextView = itemView.findViewById<TextView>(R.id.accountNameTextView)
+        private val accountDescTextView = itemView.findViewById<TextView>(R.id.accountDescTextView)
+        private val accountTransferTypeTextView = itemView.findViewById<TextView>(R.id.accountDescTextView)
 
 
 
