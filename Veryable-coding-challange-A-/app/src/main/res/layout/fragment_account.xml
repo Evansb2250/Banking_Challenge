@@ -25,7 +25,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.201"
+            android:paddingBottom="20dp"
             tools:itemCount="3"
+            android:clipToPadding="true"
             tools:listitem="@layout/account_items" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

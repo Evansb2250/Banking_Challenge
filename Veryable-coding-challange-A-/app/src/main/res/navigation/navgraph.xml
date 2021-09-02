@@ -22,5 +22,10 @@
         <argument
             android:name="Account"
             app:argType="com.veryable.android.domain.AccountDomain" />
+        <action
+            android:id="@+id/action_detailView_to_account"
+            app:destination="@id/account"
+            app:popUpTo="@id/account"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

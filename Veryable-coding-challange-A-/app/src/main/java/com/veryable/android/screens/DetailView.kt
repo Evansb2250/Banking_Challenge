@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.veryable.android.DataBinderMapperImpl
 import com.veryable.android.R
@@ -24,9 +25,14 @@ class DetailView : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_view, container, false)
+        //got the account instance passed from the HomeViewFragment
         binding.account = args.account
-        setTitleToDetail()
 
+        binding.doneButton.setOnClickListener{ it ->
+            findNavController().navigate(DetailViewDirections.actionDetailViewToAccount())
+        }
+
+        setTitleToDetail()
         setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return binding.root
@@ -40,5 +46,9 @@ class DetailView : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
     }
+
+
+
+
 }
 
