@@ -51,4 +51,14 @@
     </style>
 
 
+    <style name="toolBarStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:color">@color/alternFontColor</item>
+        <item name="android:fontFamily">@font/roboto</item>
+
+
+    </style>
+
+
 </resources>

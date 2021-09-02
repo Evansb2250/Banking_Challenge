@@ -6,5 +6,6 @@
     <dimen name="accountNameFontDetailView">16sp</dimen>
     <dimen name="standardFontSizeHomeView">12sp</dimen>
     <dimen name="standardFontSizeDetailView">14sp</dimen>
-    <dimen name="topMargin">50dp</dimen>
+    <dimen name="topMargin">20dp</dimen>
+    <dimen name="bottomButtonMargin">20dp</dimen>
 </resources>
