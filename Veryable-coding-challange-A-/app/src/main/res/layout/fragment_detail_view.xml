@@ -31,16 +31,20 @@
             android:contentDescription="@string/accountTypeViewDesc" />
 
         <TextView
-            android:id="@+id/accountType"
+            android:id="@+id/accountName"
+            android:layout_marginTop="@dimen/topMargin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{account.accountName}" />
+            android:text="@{account.accountName}"
+            style="@style/accountNameStyleInDetailView"
+            />
 
         <TextView
             android:id="@+id/accountDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{account.desc}" />
+            android:text="@{account.desc}"
+            style="@style/accountDescStyleInDetailView"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -2,4 +2,9 @@
 <resources>
     <dimen name="account_Item_margin">10dp</dimen>
     <dimen name="account_item_side_margins">30dp</dimen>
+    <dimen name="accountNameFontHomeView">14sp</dimen>
+    <dimen name="accountNameFontDetailView">16sp</dimen>
+    <dimen name="standardFontSizeHomeView">12sp</dimen>
+    <dimen name="standardFontSizeDetailView">14sp</dimen>
+    <dimen name="topMargin">50dp</dimen>
 </resources>

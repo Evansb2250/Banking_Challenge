@@ -17,4 +17,38 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="accountNameStyleInHomeView">
+        <item name="android:color">@color/standardFontColor</item>
+        <item name="android:textSize">@dimen/accountNameFontHomeView</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="accountNameStyleInDetailView">
+        <item name="android:color">@color/standardFontColor</item>
+        <item name="android:textSize">@dimen/accountNameFontDetailView</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+
+
+    <style name="accountDescStyleInHomeView">
+        <item name="android:color">@color/standardFontColor</item>
+        <item name="android:textSize">@dimen/standardFontSizeHomeView</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="accountDescStyleInDetailView">
+        <item name="android:color">@color/alternFontColor</item>
+        <item name="android:textSize">@dimen/standardFontSizeDetailView</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+
+    <style name="accountTransferStyle">
+        <item name="android:color">@color/alternFontColor</item>
+        <item name="android:textSize">@dimen/standardFontSizeHomeView</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+
 </resources>
