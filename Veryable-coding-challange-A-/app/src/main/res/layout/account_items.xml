@@ -4,6 +4,9 @@
         <variable
             name="accountDomainModel"
             type="com.veryable.android.domain.AccountDomain" />
+        <variable
+            name="clickListener"
+            type="com.veryable.android.recyclerView.AdapterEventListener" />
     </data>
 
 
@@ -16,7 +19,8 @@
     android:layout_marginTop="@dimen/account_Item_margin"
     android:layout_marginEnd="@dimen/account_item_side_margins"
     android:layout_marginBottom="@dimen/account_Item_margin"
-    android:background="#9F9191">
+    android:background="#9F9191"
+    android:onClick="@{()->clickListener.onClick(accountDomainModel)}">
 
     <ImageView
         android:id="@+id/accountTypeImageView"
@@ -38,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
-        android:text="hiho"
+        android:text="@{accountDomainModel.accountName}"
         app:layout_constraintBottom_toTopOf="@+id/accountDescTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
@@ -60,6 +64,7 @@
         android:id="@+id/accountDescTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@{accountDomainModel.desc}"
         android:layout_marginBottom="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/arrowImageView"
         app:layout_constraintBottom_toTopOf="@+id/accountTransferTypeTextView"
@@ -73,6 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:text="@{accountDomainModel.accountType.accountType}"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/accountDescTextView"

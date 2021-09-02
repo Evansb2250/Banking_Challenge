@@ -43,21 +43,14 @@ class HomeView : Fragment() {
         })
 
 
-
-
         binding.accountViewModel = accountViewModel
 
         binding.recyclerView.adapter = adapter
-
         accountViewModel.accountDetails.observe(viewLifecycleOwner, { it ->
             adapter.submitList(it)
         })
 
-
-
         binding.lifecycleOwner = this
-
-
         // Inflate the layout for this fragment
         return binding.root
     }
