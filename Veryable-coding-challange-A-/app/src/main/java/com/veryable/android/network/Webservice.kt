@@ -2,6 +2,7 @@ package com.veryable.android.network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.veryable.android.dto.AccountDTO
+import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.http.GET
@@ -48,6 +49,14 @@ object WebserviceAPI {
 }
 
 
-suspend fun getAccountDetails(): String? = WebserviceAPI.retrofitService.getAccountDetails()
+suspend fun getAccountDetails(): String? {
+    try{
+        return WebserviceAPI.retrofitService.getAccountDetails()
+    }catch (e:Exception){
+
+    }
+
+    return null
+}
 
 
