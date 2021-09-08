@@ -6,7 +6,7 @@
     <color name="iconColor">#3580A3</color>
     <color name="standardFontColor">#4A4A4A</color>
     <color name="alternFontColor">#7E7E7E</color>
-    <color name="backgroundColor">#EDDFD5</color>
+    <color name="backgroundColor">#ECECEC</color>
     <color name="toolBarColor">#F6F6F6</color>
     <color name="accountItemColor">#FFFFFF</color>
 </resources>
