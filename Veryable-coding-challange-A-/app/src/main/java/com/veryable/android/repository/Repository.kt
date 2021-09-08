@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import com.veryable.android.domain.AccountDomain
 import com.veryable.android.dto.AccountDTO
 import com.veryable.android.dto.dtoModelAsDomain
-import com.veryable.android.network.WebserviceAPI
 import com.veryable.android.network.getAccountDetails
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

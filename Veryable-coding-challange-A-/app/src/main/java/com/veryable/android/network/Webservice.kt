@@ -29,33 +29,15 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 
-//create the interface
- interface webServiceInterface{
-    //endPoint
-    @GET("/veryable.json")
-    suspend fun getAccountDetails(): String?
-}
-
-
-
-
-
-object WebserviceAPI {
-    //creates one retrofit service variable associated with
-    // WebServiceAPI
-    val retrofitService:webServiceInterface by lazy {
-        retrofit.create(webServiceInterface::class.java)
-    }
-}
+fun retrofitFactory() : WebServiceInterface = retrofit.create(WebServiceInterface::class.java)
 
 
 suspend fun getAccountDetails(): String? {
     try{
-        return WebserviceAPI.retrofitService.getAccountDetails()
+        return WebServiceAPI.retrofitService.getAccountDetails()
     }catch (e:Exception){
 
     }
-
     return null
 }
 
